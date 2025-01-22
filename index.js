@@ -1,9 +1,9 @@
-var usrinput = document.getElementById("usrinput")
-usrinput.on('keyup', function (e) {
-    if (e.key === 'Enter' || e.keyCode === 13) {
-       console.log("enter")
-    }
+var usrinput = document.getElementById("usrinput");
+usrinput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    console.log("Enter key pressed!");
+    fetch("https://opentdb.com/api.php?amount=1")
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  }
 });
-fetch("https://opentdb.com/api.php?amount=1")
-  .then((response) => response.json())
-  .then((json) => console.log(json));
