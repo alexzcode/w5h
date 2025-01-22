@@ -19,7 +19,7 @@ function shuffle(array) {
 }
 function question(qs,aw,ac) {
   as.push(aw)
-  ac.push(ac)
+  as.push(ac)
   q.innerText = "Question "+String(qno)+": "+String(qs)
   a.innerText = "Waiting on answer..."
   btn1.innerText = as[0]
