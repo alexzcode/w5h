@@ -21,6 +21,7 @@ function question(qs,aw,ac) {
   as.push(aw[0])
   as.push(aw[1])
   as.push(aw[2])
+  as.replace("undefined", "")
   as.push(ac)
   q.innerText = "Question "+String(qno)+": "+String(qs)
   a.innerText = "Waiting on answer..."
