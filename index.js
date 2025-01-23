@@ -1,4 +1,3 @@
-a.innerText = "Waiting on answer..."
 let qno = 1;
 let waiting = false;
 let correct = "";
