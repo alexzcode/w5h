@@ -21,6 +21,7 @@ body, html {
 .qdiv {
     width: 425px;
     height: 112.5px;
+    outline: 2px black;
     border: 2px black;
     border-radius: 10px;
 }
