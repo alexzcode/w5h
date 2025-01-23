@@ -1,3 +1,4 @@
+a.innerText = "Waiting on answer..."
 let qno = 1;
 let waiting = false;
 let correct = "";
@@ -27,7 +28,6 @@ function question(qs,aw,ac,rawjson) {
   as.push(aw[2])
   as.push(ac)
   q.innerText = "Question "+String(qno)+": "+String(qs)
-  a.innerText = "Waiting on answer..."
   btn1.innerText = as[0]
   btn2.innerText = as[1]
   btn3.innerText = as[2]
