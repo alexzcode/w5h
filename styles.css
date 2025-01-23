@@ -10,6 +10,5 @@ button {
     transition: cubic-bezier(0.19, 1, 0.22, 1);
 }
 button:hover {
-    padding: 7px;
-    background-color: gray;
+    background-color: rgb(190, 190, 190);
 }

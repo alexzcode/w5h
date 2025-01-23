@@ -1,6 +1,7 @@
 let qno = 1;
 let waiting = false;
-let correctno = 0
+let correct = "";
+let selected = 0;
 let as = [];
 var q = document.getElementById("q")
 var a = document.getElementById("a")
@@ -19,6 +20,7 @@ function shuffle(array) {
 }
 function question(qs,aw,ac,rawjson) {
   console.log(rawjson)
+  correct = ac;
   as.push(aw[0])
   as.push(aw[1])
   as.push(aw[2])
@@ -57,7 +59,22 @@ function sleep(s) {
   return new Promise((resolve) => setTimeout(resolve, s * 1000));
 }
 function one() {
-  selected = 1;
+  if (btn1.innerText === correct) {
+    a.innerText = "Correct!"
+    a.style = "color: green;"
+    sleep(2)
+    a.style="color: black;"
+    a.innerText = "Waiting for answer..."
+    fetch("https://opentdb.com/api.php?amount=1")
+      .then((response) => response.json())
+      .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
+  } else {
+    a.innerText = "Incorrect!"
+    a.style = "color: red;"
+    sleep(2)
+    a.innerText = "Waiting for answer..."
+    a.style = "color: black;"
+  }
 }
 function two() {
   selected = 2;
