@@ -74,11 +74,47 @@ function one() {
   }
 }
 function two() {
-  selected = 2;
+  if (btn2.innerText === correct) {
+    a.innerText = "Correct!"
+    a.style = "color: green;"
+    fetch("https://opentdb.com/api.php?amount=1")
+      .then((response) => response.json())
+      .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
+  } else {
+    a.innerText = "Incorrect!"
+    a.style = "color: red;"
+    fetch("https://opentdb.com/api.php?amount=1")
+      .then((response) => response.json())
+      .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
+  }
 }
 function three() {
-  selected = 3;
+  if (btn3.innerText === correct) {
+    a.innerText = "Correct!"
+    a.style = "color: green;"
+    fetch("https://opentdb.com/api.php?amount=1")
+      .then((response) => response.json())
+      .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
+  } else {
+    a.innerText = "Incorrect!"
+    a.style = "color: red;"
+    fetch("https://opentdb.com/api.php?amount=1")
+      .then((response) => response.json())
+      .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
+  }
 }
 function four() {
-  selected = 4;
+  if (btn4.innerText === correct) {
+    a.innerText = "Correct!"
+    a.style = "color: green;"
+    fetch("https://opentdb.com/api.php?amount=1")
+      .then((response) => response.json())
+      .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
+  } else {
+    a.innerText = "Incorrect!"
+    a.style = "color: red;"
+    fetch("https://opentdb.com/api.php?amount=1")
+      .then((response) => response.json())
+      .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
+  }
 }
