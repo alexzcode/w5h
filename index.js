@@ -18,6 +18,10 @@ function shuffle(array) {
       array[randomIndex], array[currentIndex]];
   }
 }
+function htmlDecode(input) {
+  var doc = new DOMParser().parseFromString(input, "text/html");
+  return doc.documentElement.textContent;
+}
 function question(qs,aw,ac,rawjson) {
   console.log(rawjson)
   correct = ac;
@@ -26,11 +30,12 @@ function question(qs,aw,ac,rawjson) {
   as.push(aw[1])
   as.push(aw[2])
   as.push(ac)
+  qs = htmlDecode(qs);
   q.innerText = "Question "+String(qno)+": "+String(qs)
-  btn1.innerText = as[0]
-  btn2.innerText = as[1]
-  btn3.innerText = as[2]
-  btn4.innerText = as[3]
+  btn1.innerText = htmlDecode(as[0])
+  btn2.innerText = htmlDecode(as[1])
+  btn3.innerText = htmlDecode(as[2])
+  btn4.innerText = htmlDecode(as[3])
   if (btn1.innerText === "undefined") {
     btn1.style = "display: none;"
   } else {
