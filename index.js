@@ -21,6 +21,7 @@ function shuffle(array) {
 function question(qs,aw,ac,rawjson) {
   console.log(rawjson)
   correct = ac;
+  as = [];
   as.push(aw[0])
   as.push(aw[1])
   as.push(aw[2])
