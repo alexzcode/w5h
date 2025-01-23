@@ -32,7 +32,7 @@ function question(qs,aw,ac,rawjson) {
 }
 fetch("https://opentdb.com/api.php?amount=1")
   .then((response) => response.json())
-  .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answers,json));
+  .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
 function sleep(s) {
   return new Promise((resolve) => setTimeout(resolve, s * 1000));
 }
