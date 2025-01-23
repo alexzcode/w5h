@@ -64,7 +64,7 @@ function one() {
     a.style = "color: green;"
     sleep(2)
     a.style="color: black;"
-    a.innerText = "Waiting for answer..."
+    a.innerText = "Waiting on answer..."
     fetch("https://opentdb.com/api.php?amount=1")
       .then((response) => response.json())
       .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
@@ -72,8 +72,11 @@ function one() {
     a.innerText = "Incorrect!"
     a.style = "color: red;"
     sleep(2)
-    a.innerText = "Waiting for answer..."
+    a.innerText = "Waiting on answer..."
     a.style = "color: black;"
+    fetch("https://opentdb.com/api.php?amount=1")
+      .then((response) => response.json())
+      .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
   }
 }
 function two() {
