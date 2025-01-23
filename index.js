@@ -29,6 +29,26 @@ function question(qs,aw,ac,rawjson) {
   btn2.innerText = as[1]
   btn3.innerText = as[2]
   btn4.innerText = as[3]
+  if (btn1.innerText === "undefined") {
+    btn1.style = "display: none;"
+  } else {
+    btn1.style = "display: block;"
+  }
+  if (btn2.innerText === "undefined") {
+    btn2.style = "display: none;"
+  } else {
+    btn2.style = "display: block;"
+  }
+  if (btn3.innerText === "undefined") {
+    btn3.style = "display: none;"
+  } else {
+    btn3.style = "display: block;"
+  }
+  if (btn4.innerText === "undefined") {
+    btn4.style = "display: none;"
+  } else {
+    btn4.style = "display: block;"
+  }
 }
 fetch("https://opentdb.com/api.php?amount=1")
   .then((response) => response.json())
