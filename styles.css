@@ -16,10 +16,11 @@ button:hover {
 }
 body, html {
     align-items: center;
+    text-align: center;
 }
 .qdiv {
     width: 425px;
     height: 112.5px;
-    border: black 2px;
+    border: 2px black;
     border-radius: 10px;
 }
