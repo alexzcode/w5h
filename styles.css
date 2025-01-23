@@ -1,3 +1,8 @@
 * {
     font-family: "Plus Jakarta Sans";
 }
+button {
+    padding: 6px;
+    outline: 2px black;
+    background-color: white;
+}
