@@ -77,6 +77,7 @@ function one() {
       .then((response) => response.json())
       .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
   }
+  qno = qno + 1;
 }
 function two() {
   if (btn2.innerText === correct) {
@@ -92,6 +93,7 @@ function two() {
       .then((response) => response.json())
       .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
   }
+  qno = qno + 1;
 }
 function three() {
   if (btn3.innerText === correct) {
@@ -107,6 +109,7 @@ function three() {
       .then((response) => response.json())
       .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
   }
+  qno = qno + 1;
 }
 function four() {
   if (btn4.innerText === correct) {
@@ -122,4 +125,5 @@ function four() {
       .then((response) => response.json())
       .then((json) => question(json.results[0].question,json.results[0].incorrect_answers,json.results[0].correct_answer,json));
   }
+  qno = qno + 1;
 }
