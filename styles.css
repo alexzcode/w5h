@@ -4,5 +4,12 @@
 button {
     padding: 6px;
     outline: 2px black;
+    border-radius: 5px;
     background-color: white;
+    margin-right: 5px;
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+button:hover {
+    padding: 7px;
+    background-color: gray;
 }
