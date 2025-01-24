@@ -87,7 +87,7 @@ function one() {
         )
       );
   } else {
-    a.innerText = "Incorrect! Correct answer was: "+String(ac);
+    a.innerText = "Incorrect! Correct answer was: " + String(correct);
     a.style = "color: red;";
     fetch("https://opentdb.com/api.php?amount=1")
       .then((response) => response.json())
@@ -117,7 +117,7 @@ function two() {
         )
       );
   } else {
-    a.innerText = "Incorrect! Correct answer was: "+String(ac);
+    a.innerText = "Incorrect! Correct answer was: " + String(correct);
     a.style = "color: red;";
     fetch("https://opentdb.com/api.php?amount=1")
       .then((response) => response.json())
@@ -147,7 +147,7 @@ function three() {
         )
       );
   } else {
-    a.innerText = "Incorrect! Correct answer was: "+String(ac);
+    a.innerText = "Incorrect! Correct answer was: " + String(correct);
     a.style = "color: red;";
     fetch("https://opentdb.com/api.php?amount=1")
       .then((response) => response.json())
@@ -177,7 +177,7 @@ function four() {
         )
       );
   } else {
-    a.innerText = "Incorrect! Correct answer was: "+String(ac);
+    a.innerText = "Incorrect! Correct answer was: " + String(correct);
     a.style = "color: red;";
     fetch("https://opentdb.com/api.php?amount=1")
       .then((response) => response.json())
